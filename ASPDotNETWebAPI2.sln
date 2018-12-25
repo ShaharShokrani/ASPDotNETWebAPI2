@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPDotNETWebAPI2", "ASPDotNETWebAPI2\ASPDotNETWebAPI2.csproj", "{F7494353-DD6D-47FA-A068-89669A83F818}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPDotNETWebAPI2.Tests", "ASPDotNETWebAPI2.Tests\ASPDotNETWebAPI2.Tests.csproj", "{D26A4FDD-DBAF-4FC3-A911-F4395B7A2AD0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7494353-DD6D-47FA-A068-89669A83F818}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7494353-DD6D-47FA-A068-89669A83F818}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7494353-DD6D-47FA-A068-89669A83F818}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7494353-DD6D-47FA-A068-89669A83F818}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D26A4FDD-DBAF-4FC3-A911-F4395B7A2AD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D26A4FDD-DBAF-4FC3-A911-F4395B7A2AD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D26A4FDD-DBAF-4FC3-A911-F4395B7A2AD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D26A4FDD-DBAF-4FC3-A911-F4395B7A2AD0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED0D1719-97DC-4583-98BD-A9F968BCB8A6}
+	EndGlobalSection
+EndGlobal
