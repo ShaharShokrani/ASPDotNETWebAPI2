@@ -8,6 +8,7 @@ using System.Web.Http;
 
 namespace ASPDotNETWebAPI2.Controllers
 {
+    [RoutePrefix("api/Contacts")]
     public class ContactsController : ApiController
     {
         Contact[] contacts = new Contact[]
@@ -18,14 +19,14 @@ namespace ASPDotNETWebAPI2.Controllers
         };
 
         // GET: api/Contacts
-        [Route("api/Contacts")]
+        [Route("")]
         public IEnumerable<Contact> Get()
         {
             return contacts;
         }
 
         // GET: api/Contacts/5
-        [Route("api/Contacts/{id:int}")]
+        [Route("{id:int}")]
         public IHttpActionResult Get(int id)
         {
             Contact contact = contacts.FirstOrDefault<Contact>(c => c.Id == id);
@@ -39,7 +40,7 @@ namespace ASPDotNETWebAPI2.Controllers
         }
 
         [HttpGet]
-        [Route("api/Contacts/{firstName}")]
+        [Route("{firstName}")]
         //[ActionName("ContactName")]
         //public IEnumerable<Contact> GetContactByName(string firstName)
         public IEnumerable<Contact> FindContactByName(string firstName)
@@ -50,6 +51,7 @@ namespace ASPDotNETWebAPI2.Controllers
         }
 
         // POST: api/Contacts
+        [Route("")]
         public IEnumerable<Contact> Post([FromBody]Contact newContact)
         {
             List<Contact> contactsList = contacts.ToList<Contact>();
@@ -61,6 +63,7 @@ namespace ASPDotNETWebAPI2.Controllers
         }
 
         // PUT: api/Contacts/5
+        [Route("{id:int}")]
         public IEnumerable<Contact> Put(int id, [FromBody]Contact changedContact)
         {
             Contact contact = contacts.FirstOrDefault<Contact>(c => c.Id == id);
@@ -75,6 +78,7 @@ namespace ASPDotNETWebAPI2.Controllers
         }
 
         // DELETE: api/Contacts/5
+        [Route("{id:int}")]
         public IEnumerable<Contact> Delete(int id)
         {
             contacts = contacts.Where<Contact>(c => c.Id != id).ToArray<Contact>();
