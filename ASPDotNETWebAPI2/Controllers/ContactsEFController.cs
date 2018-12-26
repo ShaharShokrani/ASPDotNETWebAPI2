@@ -12,11 +12,13 @@ using ASPDotNETWebAPI2.Models;
 
 namespace ASPDotNETWebAPI2.Controllers
 {
+    [RoutePrefix("api/ContactEF")]
     public class ContactsEFController : ApiController
     {
         private ASPDotNETWebAPI2Context db = new ASPDotNETWebAPI2Context();
 
         // GET: api/ContactsEF
+        [Route("")]
         public IQueryable<Contact> GetContacts()
         {
             return db.Contacts;
@@ -72,6 +74,7 @@ namespace ASPDotNETWebAPI2.Controllers
 
         // POST: api/ContactsEF
         [ResponseType(typeof(Contact))]
+        [Route("")]
         public IHttpActionResult PostContact(Contact contact)
         {
             if (!ModelState.IsValid)
@@ -82,7 +85,7 @@ namespace ASPDotNETWebAPI2.Controllers
             db.Contacts.Add(contact);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = contact.Id }, contact);
+            return Ok(contact); //CreatedAtRoute("DefaultApi", new { id = contact.Id }, contact);
         }
 
         // DELETE: api/ContactsEF/5

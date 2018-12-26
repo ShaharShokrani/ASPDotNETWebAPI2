@@ -102,6 +102,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812260645079_Initial.cs" />
+    <Compile Include="Migrations\201812260645079_Initial.Designer.cs">
+      <DependentUpon>201812260645079_Initial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ASPDotNETWebAPI2Context.cs" />
     <Compile Include="Models\Contact.cs" />
@@ -120,6 +124,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201812260645079_Initial.resx">
+      <DependentUpon>201812260645079_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

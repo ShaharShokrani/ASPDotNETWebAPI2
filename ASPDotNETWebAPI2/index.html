@@ -14,7 +14,7 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            $.getJSON("api/Contacts", function (result) {
+            $.getJSON("api/ContactEF", function (result) {
                 console.info(result);
             });
         });
@@ -23,7 +23,7 @@
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "api/Contacts/" + $('#searchId').val(),
+                url: "api/ContactEF/" + $('#searchId').val(),
                 success: function (result) {
                     console.info(result);
                 }
@@ -40,7 +40,7 @@
             $.ajax({
                 type: "POST",
                 dataType: "json",
-                url: "api/Contacts",
+                url: "api/ContactEF",
                 data: newContact,
                 success: function (result) {
                     console.info(result);
@@ -56,7 +56,7 @@
             $.ajax({
                 type: "PUT",
                 dataType: "json",
-                url: "api/Contacts/0",
+                url: "api/ContactEF/0",
                 data: changedContact,
                 success: function (result) {
                     console.info(result);
@@ -68,7 +68,7 @@
             $.ajax({
                 type: "DELETE",
                 dataType: "json",
-                url: "api/Contacts/0",
+                url: "api/ContactEF/0",
                 success: function (result) {
                     console.info(result);
                 }
